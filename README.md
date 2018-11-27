@@ -4,7 +4,7 @@ The detail for this kaggle project is [here](https://www.kaggle.com/c/prudential
 TLDR: Use more than 120 variables(continuous, discrete and categorical) to predict the response variable(ordinal categorical).
 
 ## Data imputation
-After excluding all variables with missing data more than 20%, there are four variables left Employment_Info_6 - cont, Medical_History_1 - disc, Employment_Info_4 - cont and Employment_Info_1 - cont. Then I regress each of them on other variables in the training set and use forward selection to select variables that explain the most. After this, I impute the missing data using the prediction from the four regression.
+After excluding all variables with missing data more than 20%, there are four variables (Employment_Info_6 - cont, Medical_History_1 - disc, Employment_Info_4 - cont and Employment_Info_1 - cont) left with missing values. Then I regress each of them on other variables in the training set and use forward selection to select variables that explain the most. Finally, I impute the missing values using the prediction from the four regression.
 R code is in [0.reduce.data.dim[Pre-processing].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/0.reduce.data.dim%5BPre-processing%5D.R).
 
 ## Data selection

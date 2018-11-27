@@ -1,14 +1,16 @@
 # kaggle---Prudential-Life-Insurance-Assessment
 
 The detail for this kaggle project is [here](https://www.kaggle.com/c/prudential-life-insurance-assessment#description).
+
 TLDR: Use more than 120 variables(continuous, discrete and categorical) to predict the response variable(ordinal categorical).
 
 ## Data imputation
-After excluding all variables with missing data more than 20%, there are four variables (Employment_Info_6 - cont, Medical_History_1 - disc, Employment_Info_4 - cont and Employment_Info_1 - cont) left with missing values. Then I regress each of them on other variables in the training set and use forward selection to select variables that explain the most. Finally, I impute the missing values using the prediction from the four regression.
+After excluding all variables with missing data more than 20%, there are four variables (Employment_Info_6 - cont, Medical_History_1 - disc, Employment_Info_4 - cont and Employment_Info_1 - cont) left with missing values. Then I regress each of them on other variables in the training set and use forward selection to select variables that explain each of them the most. Finally, I impute the missing values using the predictions from the four regressions.
 R code is in [0.reduce.data.dim[Pre-processing].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/0.reduce.data.dim%5BPre-processing%5D.R).
 
 ## Data selection
 We now have 117 variables which will create too much computation work in later models, so we need to select only part of them. I build a random forest model on the response variable using these 117 variables and select 17 variables which have the highest importance when building the model.
+
 R code is in [0.reduce.data.dim[Pre-processing].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/0.reduce.data.dim%5BPre-processing%5D.R).
 
 ## Individual models
@@ -32,6 +34,6 @@ R code is in [7.ensemble.nn.[Ensemble and prediction].R](https://github.com/zxyn
 
 ## Future work
 1. Write markdown documents.
-2. Since the data is imbalanced, we can assign cost to each response categories for better accuracy.
-3. The evaluation metric is the quadratic weighted kappa. However, the loss function for some individual models are class prediction accuracy not kappa. Models might improve if a custom kappa loss function is passed into those models.
-4. When training ensemble on the same training data used in individual models, there could be overfitting problem. We shall dig deeper into this.
+2. Since the data is imbalanced, we can assign cost to each response categories to achieve a better model.
+3. The evaluation metric is the quadratic weighted kappa. However, the loss function for some individual models are class prediction accuracy not kappa. Models might improve if a custom kappa loss function is optimzed in those models.
+4. Training the ensemble neural network on the same training data used in the individual models could cause overfitting problem. We shall dig deeper into this.

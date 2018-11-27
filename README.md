@@ -1,7 +1,7 @@
 # kaggle---Prudential-Life-Insurance-Assessment
 
-The detail for thie kaggle project is [here](https://www.kaggle.com/c/prudential-life-insurance-assessment#description).
-TLDR: Use more than 120 variables(continous, discrete and categorical) to predict the response variable(ordinal categorical).
+The detail for this kaggle project is [here](https://www.kaggle.com/c/prudential-life-insurance-assessment#description).
+TLDR: Use more than 120 variables(continuous, discrete and categorical) to predict the response variable(ordinal categorical).
 
 ## Data imputation
 After excluding all variables with missing data more than 20%, there are four variables left Employment_Info_6 - cont, Medical_History_1 - disc, Employment_Info_4 - cont and Employment_Info_1 - cont. Then I regress each of them on other variables in the training set and use forward selection to select variables that explain the most. After this, I impute the missing data using the prediction from the four regression.
@@ -31,6 +31,6 @@ Instead of using the majority vote to ensemble the 6 individual models. I pass t
 R code is in [7.ensemble.nn.[Ensemble and prediction].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/7.ensemble.nn.%5BEnsemble%20and%20prediction%5D.R).
 
 ## Future work
-1. Since the data is inbalance, we can assign cost to each response categories for better accuracy.
+1. Since the data is imbalanced, we can assign cost to each response categories for better accuracy.
 2. The evaluation metric is the quadratic weighted kappa. However, the loss function for some individual models are class prediction accuracy not kappa. Models might improve if a custom kappa loss function is passed into those models.
 3. When training ensemble on the same training data used in individual models, there could be overfitting problem. We shall dig deeper into this.

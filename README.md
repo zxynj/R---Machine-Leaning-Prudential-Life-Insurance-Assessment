@@ -18,7 +18,7 @@ R code is in [1.rf[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-I
 ### Boosting
 R code is in [2.gbm[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/2.gbm%5BModel%5D.R).
 ### Support vector machine
-R code is in [3.svm[Model].R].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/3.svm%5BModel%5D.R).
+R code is in [3.svm[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/3.svm%5BModel%5D.R).
 ### Elastic-Net Regularized GLM - Multinomial logistic regression
 R code is in [4.glmnet[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/4.glmnet%5BModel%5D.R).
 ### Linear Discriminant Analysis

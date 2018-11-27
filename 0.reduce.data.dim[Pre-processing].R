@@ -56,7 +56,7 @@ data.selected=comb %>%
   ###
   
 
-###fw selection of Employment_Info_6 on other 10 variables using 30% as test
+###fw selection of Employment_Info_6 on other variables using 30% as test
 
 data.selected.naomit=na.omit(data.selected[,order(colnames(data.selected))])
   
@@ -92,7 +92,7 @@ a=lm(Employment_Info_6~
      data=data.selected.naomit)
 summary(a)
 
-###fw selection of Medical_History_1 on other 10 variables using 30% test
+###fw selection of Medical_History_1 on other variables using 30% test
 regfit.fwd <- regsubsets(Medical_History_1 ~ ., data = data.selected.naomit[train.ind, ], nvmax = 10, method = "forward")
 
 val.errors <- rep(NA, 10)
@@ -116,7 +116,7 @@ a=lm(Medical_History_1~
        Medical_History_41,
      data=data.selected.naomit)
 summary(a)
-###fw selection of Employment_Info_4 on other 10 variables using 30% test
+###fw selection of Employment_Info_4 on other variables using 30% test
 regfit.fwd <- regsubsets(Employment_Info_4 ~ ., data = data.selected.naomit[train.ind, ], nvmax = 10, method = "forward")
 
 val.errors <- rep(NA, 10)
@@ -140,7 +140,7 @@ a=lm(Employment_Info_4~
        Employment_Info_3,
      data=data.selected.naomit)
 summary(a)
-###fw selection of Employment_Info_1 on other 10 variables using 30% test
+###fw selection of Employment_Info_1 on other variables using 30% test
 regfit.fwd <- regsubsets(Employment_Info_1 ~ ., data = data.selected.naomit[train.ind, ], nvmax = 10, method = "forward")
 
 val.errors <- rep(NA, 10)

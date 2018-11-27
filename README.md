@@ -14,7 +14,7 @@ R code is in [0.reduce.data.dim[Pre-processing].R](https://github.com/zxynj/kagg
 ## Individual models
 I build 6 individual models and use cross validation to tune their hyperparameters. Then I predict the training set's response variables using the best individual models. Now we have 6 sets of predicted response for our training set.
 ### Random forest
-R code is in [1.rf[Model].R].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/1.rf%5BModel%5D.R).
+R code is in [1.rf[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/1.rf%5BModel%5D.R).
 ### Boosting
 R code is in [2.gbm[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/2.gbm%5BModel%5D.R).
 ### Support vector machine

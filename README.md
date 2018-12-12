@@ -1,4 +1,4 @@
-# kaggle---Prudential-Life-Insurance-Assessment
+# Machine Leaning Prudential Life Insurance Assessment
 
 The detail for this kaggle project is [here](https://www.kaggle.com/c/prudential-life-insurance-assessment#description).
 

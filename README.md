@@ -25,7 +25,7 @@ R code is in [3.svm[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-
 R code is in [4.glmnet[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/4.glmnet%5BModel%5D.R).
 ### Linear Discriminant Analysis
 R code is in [5.lda[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/5.lda%5BModel%5D.R).
-### Linear Discriminant Analysis
+### K-Nearest Neighbors
 R code is in [6.knn[Model].R](https://github.com/zxynj/kaggle---Prudential-Life-Insurance-Assessment/blob/master/6.knn%5BModel%5D.R).
 
 ## Ensemble model
